@@ -1,307 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keramos Chapter | Materials Science & Engineering</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fb;
-        }
-        .keramos-blue {
-            background-color: #0d47a1; /* Deep Blue, commonly associated with professionalism/engineering */
-        }
-        .keramos-gold {
-            color: #ffb300; /* Gold accent */
-        }
-        .keramos-blue-text {
-            color: #0d47a1;
-        }
-        .section-padding {
-            padding: 4rem 1rem;
-        }
-        /* Custom scroll behavior for navigation */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keramos Chapter | Materials Science & Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .keramos-blue {
+            background-color: #0d47a1; /* Deep Blue, commonly associated with professionalism/engineering */
+        }
+        .keramos-gold {
+            color: #ffb300; /* Gold accent */
+        }
+        .keramos-blue-text {
+            color: #0d47a1;
+        }
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        /* Custom scroll behavior for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body class="text-gray-800">
 
-    <!-- Navigation Bar -->
-    <header class="keramos-blue sticky top-0 z-50 shadow-lg">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <!-- Logo/Chapter Name -->
-                <div class="flex items-center">
-                    <span class="text-2xl font-extrabold text-white tracking-wider">
-                        Keramos | <span class="keramos-gold font-bold">ALPHA CHAPTER</span>
-                    </span>
-                </div>
-                <!-- Navigation Links (Hidden on small, visible on medium+) -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4 text-white">
-                        <a href="#mission" class="hover:text-keramos-gold px-3 py-2 rounded-md text-sm font-medium transition duration-150">Our Mission</a>
-                        <a href="#events" class="hover:text-keramos-gold px-3 py-2 rounded-md text-sm font-medium transition duration-150">Events</a>
-                        <a href="#join" class="hover:text-keramos-gold px-3 py-2 rounded-md text-sm font-medium transition duration-150">How to Join</a>
-                        <a href="#contact" class="hover:text-keramos-gold px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
-                    </div>
-                </div>
-                <!-- Mobile Menu Button (Hamburger) -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-keramos-gold focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </nav>
+        <header class="keramos-blue sticky top-0 z-50 shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                                <div class="flex items-center">
+                    <span class="text-2xl font-extrabold text-white tracking-wider">
+                        Keramos | <span class="keramos-gold font-bold">ALPHA CHAPTER</span>
+                    </span>
+                </div>
+                                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4 text-white">
+                        <a href="#mission" class="hover:text-keramos-gold px-3 py-2 rounded-md text-sm font-medium transition duration-150">Our Mission</a>
+                        <a href="#events" class="hover:text-keramos-gold px-3 py-2 rounded-md text-sm font-medium transition duration-150">Events</a>
+                        <a href="#join" class="hover:text-keramos-gold px-3 py-2 rounded-md text-sm font-medium transition duration-150">How to Join</a>
+                                                <a href="#exec-board" class="hover:text-keramos-gold px-3 py-2 rounded-md text-sm font-medium transition duration-150">Board</a>
+                        <a href="#contact" class="hover:text-keramos-gold px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
+                    </div>
+                </div>
+                                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-keramos-gold focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
 
-        <!-- Mobile Menu (Initially hidden) -->
-        <div class="md:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-white">
-                <a href="#mission" class="block hover:text-keramos-gold px-3 py-2 rounded-md text-base font-medium transition duration-150">Our Mission</a>
-                <a href="#events" class="block hover:text-keramos-gold px-3 py-2 rounded-md text-base font-medium transition duration-150">Events</a>
-                <a href="#join" class="block hover:text-keramos-gold px-3 py-2 rounded-md text-base font-medium transition duration-150">How to Join</a>
-                <a href="#contact" class="block hover:text-keramos-gold px-3 py-2 rounded-md text-base font-medium transition duration-150">Contact</a>
-            </div>
-        </div>
-    </header>
+                <div class="md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-white">
+                <a href="#mission" class="block hover:text-keramos-gold px-3 py-2 rounded-md text-base font-medium transition duration-150">Our Mission</a>
+                <a href="#events" class="block hover:text-keramos-gold px-3 py-2 rounded-md text-base font-medium transition duration-150">Events</a>
+                <a href="#join" class="block hover:text-keramos-gold px-3 py-2 rounded-md text-base font-medium transition duration-150">How to Join</a>
+                                <a href="#exec-board" class="block hover:text-keramos-gold px-3 py-2 rounded-md text-base font-medium transition duration-150">Board</a>
+                <a href="#contact" class="block hover:text-keramos-gold px-3 py-2 rounded-md text-base font-medium transition duration-150">Contact</a>
+            </div>
+        </div>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="keramos-blue text-white section-padding pt-24 pb-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
-                Advancing the Science, <span class="keramos-gold">Forging the Future.</span>
-            </h1>
-            <p class="text-xl sm:text-2xl font-light mb-8 max-w-3xl mx-auto">
-                Keramos is the Professional Ceramic Engineering Fraternity dedicated to promoting the study and application of materials science.
-            </p>
-            <a href="#join" class="inline-block px-8 py-3 bg-white keramos-blue-text font-bold text-lg rounded-full shadow-xl hover:bg-gray-200 transition duration-300 transform hover:scale-105">
-                Join Our Chapter Today
-            </a>
-        </div>
-    </section>
+        <section class="keramos-blue text-white section-padding pt-24 pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
+                Advancing the Science, <span class="keramos-gold">Forging the Future.</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-light mb-8 max-w-3xl mx-auto">
+                Keramos is the Professional Ceramic Engineering Fraternity dedicated to promoting the study and application of materials science.
+            </p>
+            <a href="#join" class="inline-block px-8 py-3 bg-white keramos-blue-text font-bold text-lg rounded-full shadow-xl hover:bg-gray-200 transition duration-300 transform hover:scale-105">
+                Join Our Chapter Today
+            </a>
+        </div>
+    </section>
 
-    <!-- Our Mission Section -->
-    <section id="mission" class="section-padding bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold keramos-blue-text text-center mb-12">Our Mission</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section id="mission" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold keramos-blue-text text-center mb-12">Our Mission</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                <!-- Mission Card 1 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="keramos-gold text-4xl mb-4 text-center">🔬</div>
-                    <h3 class="text-xl font-bold mb-3 keramos-blue-text text-center">Academic Excellence</h3>
-                    <p class="text-gray-600 text-sm">
-                        Foster a strong academic community through peer-led tutoring, study groups, and access to resources to ensure member success in challenging coursework.
-                    </p>
-                </div>
+                                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="keramos-gold text-4xl mb-4 text-center">🔬</div>
+                    <h3 class="text-xl font-bold mb-3 keramos-blue-text text-center">Academic Excellence</h3>
+                    <p class="text-gray-600 text-sm">
+                        Foster a strong academic community through peer-led tutoring, study groups, and access to resources to ensure member success in challenging coursework.
+                    </p>
+                </div>
 
-                <!-- Mission Card 2 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="keramos-gold text-4xl mb-4 text-center">💼</div>
-                    <h3 class="text-xl font-bold mb-3 keramos-blue-text text-center">Professional Development</h3>
-                    <p class="text-gray-600 text-sm">
-                        Host industry guest speakers, organize resume workshops, and facilitate networking events to bridge the gap between academia and professional careers.
-                    </p>
-                </div>
+                                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="keramos-gold text-4xl mb-4 text-center">💼</div>
+                    <h3 class="text-xl font-bold mb-3 keramos-blue-text text-center">Professional Development</h3>
+                    <p class="text-gray-600 text-sm">
+                        Host industry guest speakers, organize resume workshops, and facilitate networking events to bridge the gap between academia and professional careers.
+                    </p>
+                </div>
 
-                <!-- Mission Card 3 -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <div class="keramos-gold text-4xl mb-4 text-center">🤝</div>
-                    <h3 class="text-xl font-bold mb-3 keramos-blue-text text-center">Community & Service</h3>
-                    <p class="text-gray-600 text-sm">
-                        Engage in departmental outreach and community service projects to promote Materials Science and Engineering to the next generation of students.
-                    </p>
-                </div>
+                                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="keramos-gold text-4xl mb-4 text-center">🤝</div>
+                    <h3 class="text-xl font-bold mb-3 keramos-blue-text text-center">Community & Service</h3>
+                    <p class="text-gray-600 text-sm">
+                        Engage in departmental outreach and community service projects to promote Materials Science and Engineering to the next generation of students.
+                    </p>
+                </div>
 
-            </div>
-        </div>
-    </section>
+            </div>
+        </div>
+    </section>
 
-    <!-- Upcoming Events Section -->
-    <section id="events" class="section-padding bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold keramos-blue-text text-center mb-12">Upcoming Events</h2>
+        <section id="events" class="section-padding bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold keramos-blue-text text-center mb-12">Upcoming Events</h2>
 
-            <div class="space-y-6 max-w-4xl mx-auto">
-                <!-- Event 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-keramos-blue flex flex-col md:flex-row items-start md:items-center justify-between">
-                    <div class="mb-4 md:mb-0">
-                        <p class="text-sm font-medium keramos-gold">NOV 20</p>
-                        <h4 class="text-xl font-bold keramos-blue-text">Industry Mixer: "Future of Refractories"</h4>
-                        <p class="text-gray-600">Guest Speaker: Dr. Jane Doe (Corning Inc.)</p>
-                    </div>
-                    <div class="flex-shrink-0 text-right">
-                        <p class="text-sm text-gray-500">7:00 PM - University Hall, Room 101</p>
-                        <button onclick="showMessage('You have registered for the Industry Mixer! Check your email for confirmation.')" class="mt-2 px-4 py-2 text-sm keramos-blue bg-keramos-gold rounded-full font-semibold hover:bg-yellow-600 transition duration-150">
-                            RSVP
-                        </button>
-                    </div>
-                </div>
+            <div class="space-y-6 max-w-4xl mx-auto">
+                                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-keramos-blue flex flex-col md:flex-row items-start md:items-center justify-between">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-sm font-medium keramos-gold">NOV 20</p>
+                        <h4 class="text-xl font-bold keramos-blue-text">Industry Mixer: "Future of Refractories"</h4>
+                        <p class="text-gray-600">Guest Speaker: Dr. Jane Doe (Corning Inc.)</p>
+                    </div>
+                    <div class="flex-shrink-0 text-right">
+                        <p class="text-sm text-gray-500">7:00 PM - University Hall, Room 101</p>
+                        <button onclick="showMessage('You have registered for the Industry Mixer! Check your email for confirmation.')" class="mt-2 px-4 py-2 text-sm keramos-blue bg-keramos-gold rounded-full font-semibold hover:bg-yellow-600 transition duration-150">
+                            RSVP
+                        </button>
+                    </div>
+                </div>
 
-                <!-- Event 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-keramos-blue flex flex-col md:flex-row items-start md:items-center justify-between">
-                    <div class="mb-4 md:mb-0">
-                        <p class="text-sm font-medium keramos-gold">DEC 5</p>
-                        <h4 class="text-xl font-bold keramos-blue-text">Materials Finals Study Session</h4>
-                        <p class="text-gray-600">Pizza provided! Focus on Phase Diagrams and Kinetics.</p>
-                    </div>
-                    <div class="flex-shrink-0 text-right">
-                        <p class="text-sm text-gray-500">5:30 PM - MSE Lab, Conference Room B</p>
-                        <button onclick="showMessage('You have registered for the Study Session! We look forward to seeing you there.')" class="mt-2 px-4 py-2 text-sm keramos-blue bg-keramos-gold rounded-full font-semibold hover:bg-yellow-600 transition duration-150">
-                            RSVP
-                        </button>
-                    </div>
-                </div>
+                                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-keramos-blue flex flex-col md:flex-row items-start md:items-center justify-between">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-sm font-medium keramos-gold">DEC 5</p>
+                        <h4 class="text-xl font-bold keramos-blue-text">Materials Finals Study Session</h4>
+                        <p class="text-gray-600">Pizza provided! Focus on Phase Diagrams and Kinetics.</p>
+                    </div>
+                    <div class="flex-shrink-0 text-right">
+                        <p class="text-sm text-gray-500">5:30 PM - MSE Lab, Conference Room B</p>
+                        <button onclick="showMessage('You have registered for the Study Session! We look forward to seeing you there.')" class="mt-2 px-4 py-2 text-sm keramos-blue bg-keramos-gold rounded-full font-semibold hover:bg-yellow-600 transition duration-150">
+                            RSVP
+                        </button>
+                    </div>
+                </div>
 
-                <div class="text-center mt-8">
-                    <p class="text-gray-500">More events coming soon! Follow us on social media for updates.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="text-center mt-8">
+                    <p class="text-gray-500">More events coming soon! Follow us on social media for updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- How to Join Section -->
-    <section id="join" class="section-padding bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-extrabold keramos-blue-text mb-12">Ready to Join?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-                <!-- Step 1 -->
-                <div class="p-6 rounded-xl shadow-lg border border-gray-200">
-                    <span class="keramos-gold text-5xl font-extrabold block mb-2">1</span>
-                    <h3 class="text-2xl font-semibold keramos-blue-text mb-3">Attend an Event</h3>
-                    <p class="text-gray-600">Come to one of our upcoming meetings or social events to meet the current members and learn more about our goals.</p>
-                </div>
+        <section id="join" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold keramos-blue-text mb-12">Ready to Join?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                                <div class="p-6 rounded-xl shadow-lg border border-gray-200">
+                    <span class="keramos-gold text-5xl font-extrabold block mb-2">1</span>
+                    <h3 class="text-2xl font-semibold keramos-blue-text mb-3">Attend an Event</h3>
+                    <p class="text-gray-600">Come to one of our upcoming meetings or social events to meet the current members and learn more about our goals.</p>
+                </div>
 
-                <!-- Step 2 -->
-                <div class="p-6 rounded-xl shadow-lg border border-gray-200">
-                    <span class="keramos-gold text-5xl font-extrabold block mb-2">2</span>
-                    <h3 class="text-2xl font-semibold keramos-blue-text mb-3">Submit Interest Form</h3>
-                    <p class="text-gray-600">Fill out our official interest form to receive updates and information on the new member process.</p>
-                    <a href="#" class="inline-block mt-4 text-sm font-semibold keramos-blue-text hover:underline">Access Form Here &rarr;</a>
-                </div>
+                                <div class="p-6 rounded-xl shadow-lg border border-gray-200">
+                    <span class="keramos-gold text-5xl font-extrabold block mb-2">2</span>
+                    <h3 class="text-2xl font-semibold keramos-blue-text mb-3">Submit Interest Form</h3>
+                    <p class="text-gray-600">Fill out our official interest form to receive updates and information on the new member process.</p>
+                    <a href="#" class="inline-block mt-4 text-sm font-semibold keramos-blue-text hover:underline">Access Form Here &rarr;</a>
+                </div>
 
-                <!-- Step 3 -->
-                <div class="p-6 rounded-xl shadow-lg border border-gray-200">
-                    <span class="keramos-gold text-5xl font-extrabold block mb-2">3</span>
-                    <h3 class="text-2xl font-semibold keramos-blue-text mb-3">Interview & Induct</h3>
-                    <p class="text-gray-600">Upon approval, participate in a short interview and complete the induction process to become a full member!</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                                <div class="p-6 rounded-xl shadow-lg border border-gray-200">
+                    <span class="keramos-gold text-5xl font-extrabold block mb-2">3</span>
+                    <h3 class="text-2xl font-semibold keramos-blue-text mb-3">Interview & Induct</h3>
+                    <p class="text-gray-600">Upon approval, participate in a short interview and complete the induction process to become a full member!</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="keramos-blue text-white section-padding pt-16 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-white text-center mb-8">Contact Our Chapter</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div>
-                    <h3 class="text-xl font-bold keramos-gold mb-3">Faculty Advisor:</h3>
-                    <p>Professor [Slamovich's Name]</p>
-                    <p>Email: [slamovich@university.edu]</p>
-                    <p class="mt-4">
-                        <span class="font-bold">Chapter Email:</span> keramos.[YourChapter]@gmail.com
-                    </p>
-                    <p>
-                        <span class="font-bold">Meeting Location:</span> [University Building, Room XXX]
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold keramos-gold mb-3">Chapter Leadership:</h3>
-                    <p>President: [Keegan Miller]</p>
-                    <p>Vice President: [VP Name]</p>
-                    <p class="mt-4">
-                        <span class="font-bold">Follow Us:</span>
-                        <a href="#" class="ml-2 hover:text-gray-300 transition duration-150">Instagram</a> |
-                        <a href="#" class="ml-1 hover:text-gray-300 transition duration-150">LinkedIn</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section id="exec-board" class="section-padding bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold keramos-blue-text text-center mb-12">Meet the Executive Board</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                
+                                <div class="text-center bg-white p-4 rounded-xl shadow-lg">
+                    <img class="w-24 h-24 rounded-full mx-auto object-cover mb-4 border-4 border-keramos-blue" src="https://via.placeholder.com/150/0d47a1/ffb300?text=K" alt="Placeholder image for Executive Board Member">
+                    <h3 class="text-xl font-bold keramos-blue-text">Keegan Miller</h3>
+                    <p class="keramos-gold font-semibold text-sm">President</p>
+                    <p class="text-gray-600 text-xs mt-1">Senior, Ceramics Engineering</p>
+                </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            &copy; <span id="current-year"></span> Keramos National Professional Ceramic Engineering Fraternity | [University Name] Chapter.
-        </div>
-    </footer>
+                                <div class="text-center bg-white p-4 rounded-xl shadow-lg">
+                    <img class="w-24 h-24 rounded-full mx-auto object-cover mb-4 border-4 border-keramos-blue" src="https://via.placeholder.com/150/0d47a1/ffb300?text=K" alt="Placeholder image for Executive Board Member">
+                    <h3 class="text-xl font-bold keramos-blue-text">[VP Name]</h3>
+                    <p class="keramos-gold font-semibold text-sm">Vice President</p>
+                    <p class="text-gray-600 text-xs mt-1">Junior, Materials Science</p>
+                </div>
 
-    <!-- Simple Custom Modal/Message Box (Replaces alert()) -->
-    <div id="custom-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-[100]">
-        <div class="bg-white p-6 rounded-lg shadow-2xl max-w-sm w-full transform transition-all duration-300 scale-95" id="modal-content-area">
-            <p id="modal-message" class="text-lg text-gray-800 font-semibold mb-4 text-center"></p>
-            <button onclick="closeMessage()" class="w-full keramos-blue text-white py-2 rounded-md font-medium hover:opacity-90 transition duration-150">
-                Close
-            </button>
-        </div>
-    </div>
+                                <div class="text-center bg-white p-4 rounded-xl shadow-lg">
+                    <img class="w-24 h-24 rounded-full mx-auto object-cover mb-4 border-4 border-keramos-blue" src="https://via.placeholder.com/150/0d47a1/ffb300?text=K" alt="Placeholder image for Executive Board Member">
+                    <h3 class="text-xl font-bold keramos-blue-text">[Treasurer Name]</h3>
+                    <p class="keramos-gold font-semibold text-sm">Treasurer</p>
+                    <p class="text-gray-600 text-xs mt-1">Senior, Engineering Physics</p>
+                </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Set current year in footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
+                                <div class="text-center bg-white p-4 rounded-xl shadow-lg">
+                    <img class="w-24 h-24 rounded-full mx-auto object-cover mb-4 border-4 border-keramos-blue" src="https://via.placeholder.com/150/0d47a1/ffb300?text=K" alt="Placeholder image for Executive Board Member">
+                    <h3 class="text-xl font-bold keramos-blue-text">[Secretary Name]</h3>
+                    <p class="keramos-gold font-semibold text-sm">Secretary</p>
+                    <p class="text-gray-600 text-xs mt-1">Junior, Ceramics Engineering</p>
+                </div>
 
-            // Mobile Menu Toggle Logic
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
+            </div>
+        </div>
+    </section>
 
-            const toggleMobileMenu = () => {
-                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-                mobileMenu.classList.toggle('hidden');
-            };
 
-            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        <section id="contact" class="keramos-blue text-white section-padding pt-16 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-white text-center mb-8">Contact Our Chapter</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div>
+                    <h3 class="text-xl font-bold keramos-gold mb-3">Faculty Advisor:</h3>
+                    <p>Professor [Slamovich's Name]</p>
+                    <p>Email: [slamovich@university.edu]</p>
+                    <p class="mt-4">
+                        <span class="font-bold">Chapter Email:</span> keramos.[YourChapter]@gmail.com
+                    </p>
+                    <p>
+                        <span class="font-bold">Meeting Location:</span> [University Building, Room XXX]
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold keramos-gold mb-3">Chapter Leadership:</h3>
+                    <p>President: [Keegan Miller]</p>
+                    <p>Vice President: [VP Name]</p>
+                    <p class="mt-4">
+                        <span class="font-bold">Follow Us:</span>
+                        <a href="#" class="ml-2 hover:text-gray-300 transition duration-150">Instagram</a> |
+                        <a href="#" class="ml-1 hover:text-gray-300 transition duration-150">LinkedIn</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            // Close mobile menu when a link is clicked
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        toggleMobileMenu();
-                    }
-                });
-            });
+        <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            &copy; <span id="current-year"></span> Keramos National Professional Ceramic Engineering Fraternity | [University Name] Chapter.
+        </div>
+    </footer>
 
-        });
+        <div id="custom-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-[100]">
+        <div class="bg-white p-6 rounded-lg shadow-2xl max-w-sm w-full transform transition-all duration-300 scale-95" id="modal-content-area">
+            <p id="modal-message" class="text-lg text-gray-800 font-semibold mb-4 text-center"></p>
+            <button onclick="closeMessage()" class="w-full keramos-blue text-white py-2 rounded-md font-medium hover:opacity-90 transition duration-150">
+                Close
+            </button>
+        </div>
+    </div>
 
-        // Custom Message Box Functionality
-        const modal = document.getElementById('custom-modal');
-        const modalMessage = document.getElementById('modal-message');
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        function showMessage(message) {
-            modalMessage.textContent = message;
-            modal.classList.remove('hidden');
-            // Add scale up animation effect
-            document.getElementById('modal-content-area').classList.remove('scale-95');
-            document.getElementById('modal-content-area').classList.add('scale-100');
-        }
+            // Mobile Menu Toggle Logic
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-        function closeMessage() {
-            // Add scale down animation effect
-            document.getElementById('modal-content-area').classList.remove('scale-100');
-            document.getElementById('modal-content-area').classList.add('scale-95');
-            // Hide after a brief delay to allow animation
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 150);
-        }
+            const toggleMobileMenu = () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+            };
 
-        // Close modal if user clicks outside of the modal content
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeMessage();
-            }
-        });
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
 
-    </script>
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMobileMenu();
+                    }
+                });
+            });
+
+        });
+
+        // Custom Message Box Functionality
+        const modal = document.getElementById('custom-modal');
+        const modalMessage = document.getElementById('modal-message');
+
+        function showMessage(message) {
+            modalMessage.textContent = message;
+            modal.classList.remove('hidden');
+            // Add scale up animation effect
+            document.getElementById('modal-content-area').classList.remove('scale-95');
+            document.getElementById('modal-content-area').classList.add('scale-100');
+        }
+
+        function closeMessage() {
+            // Add scale down animation effect
+            document.getElementById('modal-content-area').classList.remove('scale-100');
+            document.getElementById('modal-content-area').classList.add('scale-95');
+            // Hide after a brief delay to allow animation
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 150);
+        }
+
+        // Close modal if user clicks outside of the modal content
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeMessage();
+            }
+        });
+
+    </script>
 </body>
 </html>
+
 
