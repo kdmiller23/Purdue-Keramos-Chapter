@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission | Keramos Chapter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        /* PRIMARY COLORS */
+        .keramos-blue {
+            background-color: #050A30; 
+        }
+        .keramos-gold {
+            color: #ffb300; 
+        }
+        .keramos-gold-bg {
+            background-color: #ffb300; 
+        }
+        .keramos-black-text {
+            color: #000000; 
+        }
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="keramos-black-text">
+
+    <header class="keramos-blue sticky top-0 z-50 shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-extrabold keramos-gold tracking-wider">
+                        Keramos | <span class="text-white font-bold">PURDUE CHAPTER</span>
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4 text-white">
+                        <a href="index.html" class="keramos-gold hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Home</a>
+                        <a href="mission.html" class="keramos-gold hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Our Mission</a>
+                        <a href="events.html" class="keramos-gold hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Events</a>
+                        <a href="join.html" class="keramos-gold hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">How to Join</a>
+                        <a href="leadership.html" class="keramos-gold hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Leadership</a>
+                        <a href="contact.html" class="keramos-gold hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md keramos-gold hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-white keramos-gold-bg">
+                <a href="index.html" class="block keramos-black-text hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Home</a>
+                <a href="mission.html" class="block keramos-black-text hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Our Mission</a>
+                <a href="events.html" class="block keramos-black-text hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Events</a>
+                <a href="join.html" class="block keramos-black-text hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">How to Join</a>
+                <a href="leadership.html" class="block keramos-black-text hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Leadership</a>
+                <a href="contact.html" class="block keramos-black-text hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="keramos-blue text-white pt-16 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold">
+                <span class="keramos-gold">Our</span> Mission
+            </h1>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold keramos-black-text text-center mb-12">Pillars of Keramos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="keramos-gold text-4xl mb-4 text-center">🔬</div>
+                    <h3 class="text-xl font-bold mb-3 keramos-black-text text-center">Academic Excellence</h3>
+                    <p class="text-gray-600 text-sm">
+                        Foster a strong academic community through peer-led tutoring, study groups, and access to resources to ensure member success in challenging coursework.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="keramos-gold text-4xl mb-4 text-center">💼</div>
+                    <h3 class="text-xl font-bold mb-3 keramos-black-text text-center">Professional Development</h3>
+                    <p class="text-gray-600 text-sm">
+                        Host industry guest speakers, organize resume workshops, and facilitate networking events to bridge the gap between academia and professional careers.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="keramos-gold text-4xl mb-4 text-center">🤝</div>
+                    <h3 class="text-xl font-bold mb-3 keramos-black-text text-center">Community & Service</h3>
+                    <p class="text-gray-600 text-sm">
+                        Engage in departmental outreach and community service projects to promote Materials Science and Engineering to the next generation of students.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            &copy; <span id="current-year"></span> Keramos National Professional Ceramic Engineering Fraternity | [University Name] Chapter.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // JavaScript for mobile menu toggle (required for all pages)
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const toggleMobileMenu = () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        };
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
