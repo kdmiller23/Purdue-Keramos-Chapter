@@ -63,7 +63,7 @@
         </nav>
 
         <div class="md:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-white keramos-gold-bg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 keramos-gold-bg">
                 <a href="index.html" class="block keramos-black-text hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Home</a>
                 <a href="mission.html" class="block keramos-black-text hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Our Mission</a>
                 <a href="events.html" class="block keramos-black-text hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Events</a>
@@ -77,66 +77,66 @@
     <section class="keramos-blue text-white pt-16 pb-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl sm:text-5xl font-extrabold">
-                <span class="keramos-gold">Contact</span> Our Chapter
+                <span class="keramos-gold">Contact</span> Us
             </h1>
+            <p class="mt-4 text-xl text-white">Get in touch with the Keramos Purdue Chapter leadership.</p>
         </div>
     </section>
 
     <section class="section-padding bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="p-6 bg-gray-50 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold keramos-gold mb-3">General Information:</h3>
-                    <p>
-                        <span class="font-bold keramos-black-text">Chapter Email:</span> keramos.[YourChapter]@gmail.com
-                    </p>
-                    <p class="mt-4">
-                        <span class="font-bold keramos-black-text">Meeting Location:</span> [University Building, Room XXX]
-                    </p>
-                    <p class="text-sm text-gray-500 mt-1">Meetings are held bi-weekly during the semester.</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold keramos-black-text mb-12">Reach Out to Us</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                
+                <div class="p-8 rounded-xl shadow-xl bg-gray-50 border border-gray-100 flex flex-col items-center text-center">
+                    <h3 class="text-2xl font-bold keramos-black-text mb-4">Keramos Chapter Email</h3>
+                    <p class="text-lg text-gray-700 mb-2">For general inquiries, membership, and events:</p>
+                    <a href="mailto:keramos.purdue@email.com" class="keramos-gold text-xl font-bold hover:underline transition duration-150">
+                        keramos.purdue@email.com
+                    </a>
+                    <p class="text-sm text-gray-500 mt-4">Please allow 1-2 business days for a response.</p>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-lg shadow-md">
-                    <h3 class="text-xl font-bold keramos-gold mb-3">Faculty Advisor:</h3>
-                    <p class="keramos-black-text">Professor ['s Name]</p>
-                    <p>Email: <a href="mailto:[@purdue.edu]" class="keramos-black-text hover:underline">[@purdue.edu]</a></p>
-                    <p class="mt-4">
-                        <span class="font-bold keramos-black-text">Stay Connected:</span>
-                        <a href="#" class="ml-2 keramos-black-text hover:text-gray-700 transition duration-150">Instagram</a> |
-                        <a href="#" class="ml-1 keramos-black-text hover:text-gray-700 transition duration-150">LinkedIn</a>
-                    </p>
+
+                <div class="p-8 rounded-xl shadow-xl keramos-blue text-white border border-gray-100 flex flex-col items-center text-center">
+                    <h3 class="text-2xl font-bold keramos-gold mb-4">Purdue Material Advantage (PUMA)</h3>
+                    <p class="text-lg mb-4">Follow our affiliated student chapter for more updates and events!</p>
+                    
+                    <a href="https://www.instagram.com/purdue_ma/" target="_blank" rel="noopener noreferrer" class="bg-white keramos-black-text hover:keramos-gold-bg hover:text-white font-extrabold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.721L14.28 9.32a4 4 0 00-5.656-5.656l-1.1-1.1m4.722 7.5l1.102-1.101m-.758-4.721L14.28 9.32a4 4 0 00-5.656-5.656l-1.1-1.1m4.722 7.5L14.28 9.32a4 4 0 00-5.656-5.656l-1.1-1.1" />
+                        </svg>
+                        Follow PUMA on Instagram
+                    </a>
                 </div>
+                
             </div>
+            
         </div>
     </section>
 
     <footer class="bg-gray-800 text-white py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            &copy; <span id="current-year"></span> Keramos National Professional Ceramic Engineering Fraternity | [University Name] Chapter.
+            &copy; <span id="current-year"></span> Keramos National Professional Ceramic Engineering Fraternity | Purdue University Chapter.
         </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-
-            // Mobile Menu Toggle Logic
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            const toggleMobileMenu = () => {
-                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-                mobileMenu.classList.toggle('hidden');
-            };
-
-            mobileMenuButton.addEventListener('click', toggleMobileMenu);
-
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        toggleMobileMenu();
-                    }
-                });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // JavaScript for mobile menu toggle (required for all pages)
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const toggleMobileMenu = () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        };
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMobileMenu();
+                }
             });
         });
     </script>
