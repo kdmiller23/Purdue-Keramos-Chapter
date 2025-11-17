@@ -11,11 +11,12 @@
             font-family: 'Inter', sans-serif;
             /* GLOBAL BACKGROUND TO BLACK */
             background-color: #000000; 
-            /* GLOBAL TEXT TO GOLD */
+            /* GLOBAL DEFAULT TEXT TO GOLD */
             color: #ffb300;
         }
         /* PRIMARY COLORS */
         .keramos-blue {
+            /* Confirmed as Black for all headers/sections */
             background-color: #000000; 
         }
         .keramos-gold {
@@ -25,8 +26,12 @@
             background-color: #ffb300; 
         }
         .keramos-black-text {
-            /* Re-designate this to gold for the headings/important text */
+            /* Redefining black text to use gold for this color scheme */
             color: #ffb300; 
+        }
+        .keramos-card-bg {
+            /* Ensuring cards are dark for contrast against the text */
+            background-color: #000000;
         }
         .section-padding {
             padding: 4rem 1rem;
@@ -54,7 +59,7 @@
                         <a href="join.html" class="keramos-gold hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">How to Join</a>
                         <a href="leadership.html" class="keramos-gold hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Leadership</a>
                         <a href="contact.html" class="keramos-gold hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
-                    </div>
+                </div>
                 </div>
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md keramos-gold hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
@@ -91,7 +96,7 @@
             <h2 class="text-3xl font-extrabold keramos-gold text-center mb-12">Meet Our Executive Board</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-10 max-w-7xl mx-auto">
-                                <div class="p-8 rounded-xl shadow-xl keramos-blue border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
+                                <div class="p-8 rounded-xl shadow-xl keramos-card-bg border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-solid keramos-gold-bg shadow-md">
                         <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="Photo of Keegan Miller" class="w-full h-full object-cover">
                     </div>
@@ -103,7 +108,7 @@
                     </p>
                 </div>
 
-                                <div class="p-8 rounded-xl shadow-xl keramos-blue border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
+                                <div class="p-8 rounded-xl shadow-xl keramos-card-bg border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-solid keramos-gold-bg shadow-md">
                         <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="Photo of VP Name" class="w-full h-full object-cover">
                     </div>
@@ -114,7 +119,7 @@
                         "[Short, impactful bio about their role, major focus, or favorite part of Keramos. Replace this text.]"
                     </p>
                 </div>
-                                <div class="p-8 rounded-xl shadow-xl keramos-blue border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
+                                <div class="p-8 rounded-xl shadow-xl keramos-card-bg border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-solid keramos-gold-bg shadow-md">
                         <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="Photo of Secretary Name" class="w-full h-full object-cover">
                     </div>
@@ -125,7 +130,7 @@
                         "[Short, impactful bio about their role, major focus, or favorite part of Keramos. Replace this text.]"
                     </p>
                 </div>
-                                <div class="p-8 rounded-xl shadow-xl keramos-blue border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
+                                <div class="p-8 rounded-xl shadow-xl keramos-card-bg border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-solid keramos-gold-bg shadow-md">
                         <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="Photo of Treasurer Name" class="w-full h-full object-cover">
                     </div>
@@ -136,7 +141,7 @@
                         "[Short, impactful bio about their role, major focus, or favorite part of Keramos. Replace this text.]"
                     </p>
                 </div>
-                                <div class="p-8 rounded-xl shadow-xl keramos-blue border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
+                                <div class="p-8 rounded-xl shadow-xl keramos-card-bg border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-solid keramos-gold-bg shadow-md">
                         <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="Photo of Herald Name" class="w-full h-full object-cover">
                     </div>
@@ -147,7 +152,7 @@
                         "[Short, impactful bio about their role, major focus, or favorite part of Keramos. Replace this text.]"
                     </p>
                 </div>
-                                <div class="p-8 rounded-xl shadow-xl keramos-blue border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
+                                <div class="p-8 rounded-xl shadow-xl keramos-card-bg border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-solid keramos-gold-bg shadow-md">
                         <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="Photo of Faculty Advisor Name" class="w-full h-full object-cover">
                     </div>
@@ -191,3 +196,4 @@
     </script>
 </body>
 </html>
+
