@@ -7,96 +7,110 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Define custom colors and default styles */
-        .keramos-gold {
-            color: #ffb300; 
+        /* Custom Color Definitions to match the homepage */
+        :root {
+            --keramos-dark-blue: #111827; /* Main background color, similar to homepage hero */
+            --keramos-gold: #ffb300;      /* Gold accent color */
+            --keramos-white: #ffffff;      /* Main text color */
+            --keramos-light-gray: #d1d5db; /* Secondary text color for bios */
+            --keramos-card-bg-dark: #1f2937; /* Slightly lighter dark blue for cards */
         }
-        .keramos-gold-bg {
-            background-color: #ffb300; 
-        }
-        .keramos-blue, body {
-            /* Ensure ALL main backgrounds are black */
-            background-color: #000000; 
-        }
-        .keramos-card-bg {
-            /* Dark background for cards */
-            background-color: #1a1a1a;
-        }
-        
-        /* Global Defaults: Black background, Gold text */
+
         body {
             font-family: 'Inter', sans-serif;
-            color: #ffb300; 
+            background-color: var(--keramos-dark-blue); /* Global background matches homepage */
+            color: var(--keramos-white); /* Default text color is white */
         }
-        
+
+        .keramos-gold-text {
+            color: var(--keramos-gold); 
+        }
+        .keramos-white-text {
+            color: var(--keramos-white);
+        }
+        .keramos-light-gray-text {
+            color: var(--keramos-light-gray);
+        }
+        .keramos-dark-blue-bg {
+            background-color: var(--keramos-dark-blue);
+        }
+        .keramos-gold-bg {
+            background-color: var(--keramos-gold); 
+        }
+        .keramos-card-bg {
+            background-color: var(--keramos-card-bg-dark); /* Card background */
+        }
         .section-padding {
             padding: 4rem 1rem;
         }
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
-<body class="keramos-gold">
+<body>
 
-    <header class="keramos-blue sticky top-0 z-50 shadow-lg">
+    <header class="keramos-dark-blue-bg sticky top-0 z-50 shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <span class="text-2xl font-extrabold keramos-gold tracking-wider">
-                        Keramos | <span class="keramos-gold font-bold">PURDUE CHAPTER</span>
+                    <span class="text-2xl font-extrabold keramos-gold-text tracking-wider">
+                        Keramos | <span class="keramos-white-text font-bold">PURDUE CHAPTER</span>
                     </span>
-            </div>
-            <div class="hidden md:block">
-                <div class="ml-10 flex items-baseline space-x-4">
-                                        <a href="index.html" class="keramos-gold hover:text-black px-3 py-2 rounded-md text-sm font-medium transition duration-150">Home</a>
-                    <a href="mission.html" class="keramos-gold hover:text-black px-3 py-2 rounded-md text-sm font-medium transition duration-150">Our Mission</a>
-                    <a href="events.html" class="keramos-gold hover:text-black px-3 py-2 rounded-md text-sm font-medium transition duration-150">Events</a>
-                    <a href="join.html" class="keramos-gold hover:text-black px-3 py-2 rounded-md text-sm font-medium transition duration-150">How to Join</a>
-                    <a href="leadership.html" class="keramos-gold hover:text-black px-3 py-2 rounded-md text-sm font-medium transition duration-150">Leadership</a>
-                    <a href="contact.html" class="keramos-gold hover:text-black px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="keramos-white-text hover:keramos-gold-text px-3 py-2 rounded-md text-sm font-medium transition duration-150">Home</a>
+                        <a href="mission.html" class="keramos-white-text hover:keramos-gold-text px-3 py-2 rounded-md text-sm font-medium transition duration-150">Our Mission</a>
+                        <a href="events.html" class="keramos-white-text hover:keramos-gold-text px-3 py-2 rounded-md text-sm font-medium transition duration-150">Events</a>
+                        <a href="join.html" class="keramos-white-text hover:keramos-gold-text px-3 py-2 rounded-md text-sm font-medium transition duration-150">How to Join</a>
+                        <a href="leadership.html" class="keramos-white-text hover:keramos-gold-text px-3 py-2 rounded-md text-sm font-medium transition duration-150">Leadership</a>
+                        <a href="contact.html" class="keramos-white-text hover:keramos-gold-text px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
+                </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md keramos-white-text hover:keramos-gold-text focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md keramos-gold hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
+        </nav>
+
+        <div class="md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 keramos-gold-bg">
+                <a href="index.html" class="block text-black hover:keramos-white-text px-3 py-2 rounded-md text-base font-medium transition duration-150">Home</a>
+                <a href="mission.html" class="block text-black hover:keramos-white-text px-3 py-2 rounded-md text-base font-medium transition duration-150">Our Mission</a>
+                <a href="events.html" class="block text-black hover:keramos-white-text px-3 py-2 rounded-md text-base font-medium transition duration-150">Events</a>
+                <a href="join.html" class="block text-black hover:keramos-white-text px-3 py-2 rounded-md text-base font-medium transition duration-150">How to Join</a>
+                <a href="leadership.html" class="block text-black hover:keramos-white-text px-3 py-2 rounded-md text-base font-medium transition duration-150">Leadership</a>
+                <a href="contact.html" class="block text-black hover:keramos-white-text px-3 py-2 rounded-md text-base font-medium transition duration-150">Contact</a>
             </div>
         </div>
-    </nav>
-
-    <div class="md:hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 keramos-gold-bg">
-                        <a href="index.html" class="block text-black hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Home</a>
-            <a href="mission.html" class="block text-black hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Our Mission</a>
-            <a href="events.html" class="block text-black hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Events</a>
-            <a href="join.html" class="block text-black hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">How to Join</a>
-            <a href="leadership.html" class="block text-black hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Leadership</a>
-            <a href="contact.html" class="block text-black hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Contact</a>
-        </div>
-    </div>
     </header>
 
-        <section class="keramos-blue keramos-gold pt-16 pb-16">
+        <section class="keramos-dark-blue-bg keramos-white-text pt-16 pb-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl sm:text-5xl font-extrabold">
-                <span class="keramos-gold">Chapter</span> Leadership
+                <span class="keramos-white-text">Chapter</span> <span class="keramos-gold-text">Leadership</span>
             </h1>
         </div>
     </section>
 
-        <section class="section-padding keramos-blue">
+        <section class="section-padding keramos-dark-blue-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-extrabold keramos-gold text-center mb-12">Meet Our Executive Board</h2>
+            <h2 class="text-3xl font-extrabold keramos-white-text text-center mb-12">Meet Our Executive Board</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-10 max-w-7xl mx-auto">
                                 <div class="p-8 rounded-xl shadow-xl keramos-card-bg border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-solid keramos-gold-bg shadow-md">
                         <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="Photo of Keegan Miller" class="w-full h-full object-cover">
                     </div>
-                    <span class="keramos-gold text-2xl font-extrabold block mb-1">President</span>
-                    <h3 class="text-2xl font-bold keramos-gold mb-1">Keegan Miller</h3>
-                    <p class="text-sm keramos-gold font-medium mb-4">Materials Engineering (Junior) | Minors: EE & Semiconductors</p>
-                    <p class="keramos-gold text-sm italic mt-2">
+                    <span class="keramos-gold-text text-2xl font-extrabold block mb-1">President</span>
+                    <h3 class="text-2xl font-bold keramos-white-text mb-1">Keegan Miller</h3>
+                    <p class="text-sm keramos-light-gray-text font-medium mb-4">Materials Engineering (Junior) | Minors: EE & Semiconductors</p>
+                    <p class="keramos-light-gray-text text-sm italic mt-2">
                         Hi! I'm Keegan, the founding president of Purdue's Keramos chapter. I'm a junior in Materials Engineering and pursuing minors in both Electrical Engineering and Semiconductors and Microelectronics. My interests lie in the analysis and fabrication of ceramics and electric materials. After graduation, I plan on attending grad school and eventually leading my own research team.
                     </p>
                 </div>
@@ -105,54 +119,58 @@
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-solid keramos-gold-bg shadow-md">
                         <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="Photo of VP Name" class="w-full h-full object-cover">
                     </div>
-                    <span class="keramos-gold text-2xl font-extrabold block mb-1">Vice President</span>
-                    <h3 class="text-2xl font-bold keramos-gold mb-1">[VP Name]</h3>
-                    <p class="text-sm keramos-gold font-medium mb-4">[Major] | Class of [Year]</p>
-                    <p class="keramos-gold text-sm italic mt-2">
+                    <span class="keramos-gold-text text-2xl font-extrabold block mb-1">Vice President</span>
+                    <h3 class="text-2xl font-bold keramos-white-text mb-1">[VP Name]</h3>
+                    <p class="text-sm keramos-light-gray-text font-medium mb-4">[Major] | Class of [Year]</p>
+                    <p class="keramos-light-gray-text text-sm italic mt-2">
                         "[Short, impactful bio about their role, major focus, or favorite part of Keramos. Replace this text.]"
                     </p>
                 </div>
+
                                 <div class="p-8 rounded-xl shadow-xl keramos-card-bg border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-solid keramos-gold-bg shadow-md">
                         <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="Photo of Secretary Name" class="w-full h-full object-cover">
                     </div>
-                    <span class="keramos-gold text-2xl font-extrabold block mb-1">Secretary</span>
-                    <h3 class="text-2xl font-bold keramos-gold mb-1">[Secretary Name]</h3>
-                    <p class="text-sm keramos-gold font-medium mb-4">[Major] | Class of [Year]</p>
-                    <p class="keramos-gold text-sm italic mt-2">
+                    <span class="keramos-gold-text text-2xl font-extrabold block mb-1">Secretary</span>
+                    <h3 class="text-2xl font-bold keramos-white-text mb-1">[Secretary Name]</h3>
+                    <p class="text-sm keramos-light-gray-text font-medium mb-4">[Major] | Class of [Year]</p>
+                    <p class="keramos-light-gray-text text-sm italic mt-2">
                         "[Short, impactful bio about their role, major focus, or favorite part of Keramos. Replace this text.]"
                     </p>
                 </div>
+
                                 <div class="p-8 rounded-xl shadow-xl keramos-card-bg border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-solid keramos-gold-bg shadow-md">
                         <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="Photo of Treasurer Name" class="w-full h-full object-cover">
                     </div>
-                    <span class="keramos-gold text-2xl font-extrabold block mb-1">Treasurer</span>
-                    <h3 class="text-2xl font-bold keramos-gold mb-1">[Treasurer Name]</h3>
-                    <p class="text-sm keramos-gold font-medium mb-4">[Major] | Class of [Year]</p>
-                    <p class="keramos-gold text-sm italic mt-2">
+                    <span class="keramos-gold-text text-2xl font-extrabold block mb-1">Treasurer</span>
+                    <h3 class="text-2xl font-bold keramos-white-text mb-1">[Treasurer Name]</h3>
+                    <p class="text-sm keramos-light-gray-text font-medium mb-4">[Major] | Class of [Year]</p>
+                    <p class="keramos-light-gray-text text-sm italic mt-2">
                         "[Short, impactful bio about their role, major focus, or favorite part of Keramos. Replace this text.]"
                     </p>
                 </div>
+
                                 <div class="p-8 rounded-xl shadow-xl keramos-card-bg border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-solid keramos-gold-bg shadow-md">
                         <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="Photo of Herald Name" class="w-full h-full object-cover">
                     </div>
-                    <span class="keramos-gold text-2xl font-extrabold block mb-1">Herald</span>
-                    <h3 class="text-2xl font-bold keramos-gold mb-1">[Herald Name]</h3>
-                    <p class="text-sm keramos-gold font-medium mb-4">[Major] | Class of [Year]</p>
-                    <p class="keramos-gold text-sm italic mt-2">
+                    <span class="keramos-gold-text text-2xl font-extrabold block mb-1">Herald</span>
+                    <h3 class="text-2xl font-bold keramos-white-text mb-1">[Herald Name]</h3>
+                    <p class="text-sm keramos-light-gray-text font-medium mb-4">[Major] | Class of [Year]</p>
+                    <p class="keramos-light-gray-text text-sm italic mt-2">
                         "[Short, impactful bio about their role, major focus, or favorite part of Keramos. Replace this text.]"
                     </p>
                 </div>
+
                                 <div class="p-8 rounded-xl shadow-xl keramos-card-bg border border-gray-700 flex flex-col items-center text-center transform hover:shadow-2xl transition duration-300">
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-solid keramos-gold-bg shadow-md">
                         <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="Photo of Faculty Advisor Name" class="w-full h-full object-cover">
                     </div>
-                    <span class="keramos-gold text-2xl font-extrabold block mb-1">Faculty Advisor</span>
-                    <h3 class="text-2xl font-bold keramos-gold mb-1">[Advisor Name]</h3>
-                    <p class="text-sm keramos-gold font-medium mb-4">Professor, Department of [Department]</p>
-                    <p class="keramos-gold text-sm italic mt-2">
+                    <span class="keramos-gold-text text-2xl font-extrabold block mb-1">Faculty Advisor</span>
+                    <h3 class="text-2xl font-bold keramos-white-text mb-1">[Advisor Name]</h3>
+                    <p class="text-sm keramos-light-gray-text font-medium mb-4">Professor, Department of [Department]</p>
+                    <p class="keramos-light-gray-text text-sm italic mt-2">
                         "[Short, impactful bio about their role and research focus. Replace this text.]"
                     </p>
                 </div>
@@ -160,30 +178,7 @@
         </div>
     </section>
 
-    <footer class="keramos-blue keramos-gold py-6">
+    <footer class="keramos-dark-blue-bg keramos-white-text py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
             &copy; <span id="current-year"></span> Keramos National Professional Ceramic Engineering Fraternity | [University Name] Chapter.
         </div>
-    </footer>
-
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        // JavaScript for mobile menu toggle (required for all pages)
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const toggleMobileMenu = () => {
-            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('hidden');
-        };
-        mobileMenuButton.addEventListener('click', toggleMobileMenu);
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (!mobileMenu.classList.contains('hidden')) {
-                    toggleMobileMenu();
-                }
-            });
-        });
-    </script>
-</body>
-</html>
