@@ -33,13 +33,14 @@
         /* Custom size for the calendar to ensure responsiveness */
         .calendar-container {
             width: 100%;
-            height: 80vh; /* 80% of the viewport height */
+            height: 80vh; /* 80% of viewport height */
             min-height: 600px;
         }
     </style>
 </head>
 <body class="keramos-black-text">
 
+    <!-- HEADER -->
     <header class="keramos-black sticky top-0 z-50 shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -68,7 +69,8 @@
             </div>
         </nav>
 
-        <div class="md:hidden" id="mobile-menu">
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 keramos-gold-bg">
                 <a href="index.html" class="block keramos-black-text hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Home</a>
                 <a href="mission.html" class="block keramos-black-text hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150">Our Mission</a>
@@ -80,6 +82,7 @@
         </div>
     </header>
 
+    <!-- TOP BLACK SECTION -->
     <section class="keramos-black text-white pt-16 pb-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl sm:text-5xl font-extrabold">
@@ -89,23 +92,24 @@
         </div>
     </section>
 
+    <!-- CALENDAR SECTION -->
     <section class="section-padding bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-extrabold keramos-black-text text-center mb-8">Keramos Chapter Calendar</h2>
+            <h2 class="text-3xl font-extrabold keramos-black-text mb-8">Keramos Chapter Calendar</h2>
             
             <div class="calendar-container mx-auto shadow-2xl border-4 border-solid border-gray-100 rounded-xl overflow-hidden">
                 <iframe 
-                    src="<iframe src="https://calendar.google.com/calendar/embed?src=d23fda6a0d88a088ed7445acdd510d2b70a0eb9150982709ec769719aa46c1ac%40group.calendar.google.com&ctz=America%2FIndiana%2FIndianapolis" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>" 
-                    style="border: solid 1px #777" 
+                    src="https://calendar.google.com/calendar/embed?src=d23fda6a0d88a088ed7445acdd510d2b70a0eb9150982709ec769719aa46c1ac%40group.calendar.google.com&ctz=America%2FIndiana%2FIndianapolis" 
+                    style="border:0" 
                     frameborder="0" 
                     scrolling="no"
                     class="w-full h-full"
                 ></iframe>
-
             </div>
-            
         </div>
     </section>
+
+    <!-- FOOTER -->
     <footer class="bg-gray-800 text-white py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
             &copy; <span id="current-year"></span> Keramos National Professional Ceramic Engineering Fraternity | Purdue University Chapter.
@@ -114,7 +118,8 @@
 
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
-        // JavaScript for mobile menu toggle (required for all pages)
+
+        // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const toggleMobileMenu = () => {
@@ -131,5 +136,6 @@
             });
         });
     </script>
+
 </body>
 </html>
