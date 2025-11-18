@@ -1,55 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chapter Leadership | Keramos Chapter</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        /* PRIMARY COLORS - MATCHING HOMEPAGE */
-        .keramos-black {
-            background-color: #080808; 
-        }
-        .keramos-gold {
-            color: #ffb300; 
-        }
-        .keramos-gold-bg {
-            background-color: #ffb300; 
-        }
-        .keramos-black-text {
-            color: #000000; 
-        }
 
-        /* MISSING CLASS — FIX ADDED */
+    <style>
+        .keramos-black { background-color: #080808; }
+        .keramos-gold { color: #ffb300; }
+        .keramos-gold-bg { background-color: #ffb300; }
+        .keramos-black-text { color: #000000; }
+        .keramos-card-bg-white { background-color: #ffffff; }
+
+        /* Header + Hero Background */
         .keramos-blue {
-            background-color: #080808;  /* Keramos Black */
+            background-color: #080808; /* Black */
             color: white;
         }
 
-        .section-padding {
-            padding: 4rem 1rem;
-        }
+        .section-padding { padding: 4rem 1rem; }
 
-        /* GLOBAL BODY STYLE - Matches the homepage */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f7f9fb;
             color: #000000;
         }
 
-        .keramos-card-bg-white {
-            background-color: #ffffff;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 
 <body class="keramos-black-text">
 
+    <!-- HEADER -->
     <header class="keramos-blue sticky top-0 z-50 shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -58,6 +43,146 @@
                         Keramos | <span class="text-white font-bold">PURDUE CHAPTER</span>
                     </span>
                 </div>
+
+                <!-- Desktop Nav -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4 text-white">
+                        <a href="index.html" class="hover:keramos-gold">Home</a>
+                        <a href="#exec-board" class="hover:keramos-gold">Executive Board</a>
+                        <a href="#faculty" class="hover:keramos-gold">Faculty Advisors</a>
+                        <a href="#contact" class="hover:keramos-gold">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="keramos-blue text-white section-padding pt-40 pb-24 text-center">
+        <h1 class="text-5xl font-extrabold keramos-gold">Leadership</h1>
+        <p class="text-lg max-w-2xl mx-auto mt-4 text-gray-300">Meet the Executive Board and Faculty Advisors leading the Purdue Chapter of Keramos.</p>
+    </section>
+
+    <!-- EXEC BOARD SECTION -->
+    <section id="exec-board" class="section-padding keramos-card-bg-white text-black">
+        <div class="max-w-6xl mx-auto text-center mb-12">
+            <h2 class="text-4xl font-bold keramos-black-text">Executive Board</h2>
+            <p class="text-gray-600 mt-2">2024–2025 Executive Board Members</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+            <!-- Example Member Card -->
+            <div class="bg-white shadow-lg rounded-xl p-6 text-center border border-gray-200">
+                <img src="images/president.jpg" alt="President" class="w-32 h-32 object-cover rounded-full mx-auto shadow-md">
+                <h3 class="text-2xl font-semibold mt-4">John Doe</h3>
+                <p class="text-keramos-gold font-bold">President</p>
+                <p class="text-gray-600 mt-2 text-sm">Materials Engineering — Purdue University</p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-xl p-6 text-center border border-gray-200">
+                <img src="images/vicepresident.jpg" alt="Vice President" class="w-32 h-32 object-cover rounded-full mx-auto shadow-md">
+                <h3 class="text-2xl font-semibold mt-4">Jane Smith</h3>
+                <p class="text-keramos-gold font-bold">Vice President</p>
+                <p class="text-gray-600 mt-2 text-sm">Materials Engineering — Purdue University</p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-xl p-6 text-center border border-gray-200">
+                <img src="images/secretary.jpg" alt="Secretary" class="w-32 h-32 object-cover rounded-full mx-auto shadow-md">
+                <h3 class="text-2xl font-semibold mt-4">Alex Johnson</h3>
+                <p class="text-keramos-gold font-bold">Secretary</p>
+                <p class="text-gray-600 mt-2 text-sm">Materials Engineering — Purdue University</p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-xl p-6 text-center border border-gray-200">
+                <img src="images/treasurer.jpg" alt="Treasurer" class="w-32 h-32 object-cover rounded-full mx-auto shadow-md">
+                <h3 class="text-2xl font-semibold mt-4">Emily Clark</h3>
+                <p class="text-keramos-gold font-bold">Treasurer</p>
+                <p class="text-gray-600 mt-2 text-sm">Materials Engineering — Purdue University</p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-xl p-6 text-center border border-gray-200">
+                <img src="images/historian.jpg" alt="Historian" class="w-32 h-32 object-cover rounded-full mx-auto shadow-md">
+                <h3 class="text-2xl font-semibold mt-4">Michael Lee</h3>
+                <p class="text-keramos-gold font-bold">Historian</p>
+                <p class="text-gray-600 mt-2 text-sm">Materials Engineering — Purdue University</p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-xl p-6 text-center border border-gray-200">
+                <img src="images/webmaster.jpg" alt="Webmaster" class="w-32 h-32 object-cover rounded-full mx-auto shadow-md">
+                <h3 class="text-2xl font-semibold mt-4">Sarah Brown</h3>
+                <p class="text-keramos-gold font-bold">Webmaster</p>
+                <p class="text-gray-600 mt-2 text-sm">Materials Engineering — Purdue University</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FACULTY ADVISOR SECTION -->
+    <section id="faculty" class="section-padding keramos-card-bg-white text-black">
+        <div class="max-w-6xl mx-auto text-center mb-12">
+            <h2 class="text-4xl font-bold keramos-black-text">Faculty Advisors</h2>
+            <p class="text-gray-600 mt-2">Supporting the Leadership and Mission of Keramos</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-4xl mx-auto">
+
+            <div class="bg-white shadow-lg rounded-xl p-6 text-center border border-gray-200">
+                <img src="images/advisor1.jpg" alt="Faculty Advisor" class="w-32 h-32 object-cover rounded-full mx-auto shadow-md">
+                <h3 class="text-2xl font-semibold mt-4">Dr. Advisor One</h3>
+                <p class="text-gray-600 mt-2 text-sm">Faculty Advisor — Materials Engineering</p>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-xl p-6 text-center border border-gray-200">
+                <img src="images/advisor2.jpg" alt="Faculty Advisor" class="w-32 h-32 object-cover rounded-full mx-auto shadow-md">
+                <h3 class="text-2xl font-semibold mt-4">Dr. Advisor Two</h3>
+                <p class="text-gray-600 mt-2 text-sm">Faculty Advisor — Materials Engineering</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-padding text-center">
+        <h2 class="text-3xl font-bold keramos-black-text">Contact Us</h2>
+        <p class="text-gray-600 mt-4 max-w-xl mx-auto">For questions about membership, events, or leadership opportunities, please reach out to our Executive Board.</p>
+        <p class="font-semibold mt-4">Email: <span class="keramos-gold">keramos@purdue.edu</span></p>
+    </section>
+
+
+
+<!-- EXECUTIVE BOARD SECTION -->
+<section class="section-padding">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl font-extrabold keramos-black-text mb-10">Executive Board</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- PRESIDENT -->
+      <div class="keramos-card-bg-white rounded-2xl shadow-lg p-6">
+        <h3 class="text-2xl font-bold keramos-gold">President</h3>
+        <p class="font-semibold mt-2">John Doe</p>
+        <p class="text-sm mt-2">John is a senior in Materials Engineering focused on advanced ceramics research. He oversees chapter operations and strategic leadership.</p>
+      </div>
+
+      <!-- VICE PRESIDENT -->
+      <div class="keramos-card-bg-white rounded-2xl shadow-lg p-6">
+        <h3 class="text-2xl font-bold keramos-gold">Vice President</h3>
+        <p class="font-semibold mt-2">Jane Smith</p>
+        <p class="text-sm mt-2">Jane coordinates outreach, recruitment, and assists with chapter event planning.</p>
+      </div>
+
+      <!-- TREASURER -->
+      <div class="keramos-card-bg-white rounded-2xl shadow-lg p-6">
+        <h3 class="text-2xl font-bold keramos-gold">Treasurer</h3>
+        <p class="font-semibold mt-2">Michael Lee</p>
+        <p class="text-sm mt-2">Michael manages chapter funds, budgeting, and financial reporting.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+
 
